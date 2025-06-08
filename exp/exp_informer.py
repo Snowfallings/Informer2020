@@ -110,7 +110,8 @@ class Exp_Informer(Exp_Basic):
         return model_optim
     
     def _select_criterion(self):
-        criterion =  nn.MSELoss()
+        # criterion =  nn.MSELoss()
+        criterion = nn.HuberLoss(delta=0.5)
         return criterion
 
     def vali(self, vali_data, vali_loader, criterion):
