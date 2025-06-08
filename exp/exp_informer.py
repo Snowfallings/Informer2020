@@ -72,6 +72,7 @@ class Exp_Informer(Exp_Basic):
             'Count':Dataset_Custom,
             'Diff_Count':Dataset_Custom,
             'features_Count':Dataset_Custom,
+            'features_Count_LN':Dataset_Custom,
         }
         Data = data_dict[self.args.data]
         timeenc = 0 if args.embed!='timeF' else 1
